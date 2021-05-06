@@ -1,0 +1,49 @@
+.panorama-view,
+#panorama {
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.panorama-view {
+    position: relative;
+    border: .2rem solid #fff;
+
+    .control-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1rem;
+    }
+}
+
+.control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+    font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+
+    svg .x {
+        fill: #fff;
+    }
+    svg {
+        margin-right: .25rem;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    .panorama-view,
+    #panorama {
+        border-radius: 0;
+    }
+
+    .panorama-view {
+        border: none;
+    }
+}

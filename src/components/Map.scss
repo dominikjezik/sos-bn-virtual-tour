@@ -1,0 +1,119 @@
+.leaflet-container { 
+    background: #cfddff; 
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    border: .2rem solid #fff;
+}
+
+.frame {
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    border-radius: 1rem;
+    /*border: .2rem solid #d00;*/
+    border: .2rem solid #fff;
+    max-width: 85rem;
+    max-height: 50rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    background: #8aa0ff;
+    background: radial-gradient(circle, rgba(138,160,255,1) 60%, rgba(73,107,255,1) 100%);
+}
+
+.frame .bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.logo {
+    z-index: 500;
+    position: absolute;
+    top: -2.1rem;
+    left: -2.1rem;
+    width: 10rem;
+}
+
+
+.leaflet-container .control-list {
+    display: flex;
+
+    border: 2px solid rgba(0,0,0,0.2);
+    background-clip: padding-box;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.leaflet-container .control-item {
+    border: none;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    line-height: 26px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 4px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.leaflet-container .control-item:last-child {
+    border-right: none;
+}
+
+.leaflet-container .control-item:hover {
+    background-color: #f4f4f4;
+}
+
+.leaflet-container .control-item:disabled {
+    cursor: default;
+    background-color: #f4f4f4;
+    color: #bbb;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .frame {
+        padding: 1.5rem;
+    }
+    
+    .logo {
+        width: 8rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .frame {
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    .leaflet-container {
+        border: none;
+        border-radius: 0;
+    }
+
+    .frame .bg {
+        border-radius: 0;
+    }
+    
+    .logo {
+        top: auto;
+        bottom: .75rem;
+        left: .75rem;
+        width: 4rem;
+    }
+}
+
+.tooltip {
+    font-size: 1rem;
+}
