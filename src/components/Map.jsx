@@ -93,6 +93,7 @@ function Map({ onSelectMarker, currentFloor, setCurrentFloor }) {
 
                 { markers[currentFloor].map(marker => (
                     <Marker 
+                        key={marker.position}
                         position={marker.position} 
                         icon={ICON} 
                         eventHandlers={{
