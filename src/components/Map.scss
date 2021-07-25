@@ -1,5 +1,5 @@
 .leaflet-container { 
-    background: #cfddff; 
+    background: #cfddff !important; 
     border-radius: 1rem;
     width: 100%;
     height: 100%;
@@ -18,19 +18,34 @@
     height: 100%;
     padding: 2rem;
     background: #8aa0ff;
-    background: radial-gradient(circle, rgba(138,160,255,1) 60%, rgba(73,107,255,1) 100%);
-}
+    background: radial-gradient(circle, #acbcff 60%, #496bff 100%); //radial-gradient(circle, rgba(138,160,255,1) 60%, rgba(73,107,255,1) 100%);
 
-.frame .bg {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    border-radius: 1rem;
-    padding: 2rem;
-    width: 100%;
-    height: 100%;
-    background: #fff;
+    .bg {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        border-radius: 1rem;
+        padding: 2rem;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+    }
+
+    .author-link {
+        z-index: 500;
+        position: absolute;
+        bottom: .4rem;
+        left: 50%;
+        transform: translate(-50%);
+        color: #000333;
+        text-decoration: none;
+        text-align: center;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }
 
 .logo {
@@ -83,6 +98,11 @@
 @media only screen and (max-width: 1000px) {
     .frame {
         padding: 1.5rem;
+
+        .author-link {
+            bottom: .2rem;
+            font-size: .9rem;
+        }
     }
     
     .logo {
