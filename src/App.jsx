@@ -27,12 +27,12 @@ function App() {
                 
                 for (const marker of floor) {
                     ImageLoader.load(`/img/panorama/${marker.img}`, () => {
-                        console.log("on load")
+                        // on load
                         setLoadedImages(old => old + 1)
                     }, (loaded, total) => {
-                        console.log("on progress", loaded, total)
+                        // on progress
                     }, () => {
-                        console.log("on error")
+                        // on error
                     })
 
                     setAllImages(old => old + 1)
@@ -45,7 +45,9 @@ function App() {
         <div className="App">
             <div className="container">
                 <div className="frame">
-                    <img src="img/logo.png" className="logo" alt=""></img>
+                    <a href="https://spsbn.edupage.org/">
+                        <img src="img/logo.png" className="logo" alt=""></img>
+                    </a>
 
                     { allImages === loadedImages ? 
                         (selectedMarker === null ? 
@@ -54,6 +56,7 @@ function App() {
                         ):
                         <Loading loadedImages={loadedImages} allImages={allImages} />
                     }
+                    <a href="https://dominikjezik.sk" className="author-link">Dominik Ježík &copy; { new Date().getFullYear() }</a>
                 </div>
             </div>
         </div>
